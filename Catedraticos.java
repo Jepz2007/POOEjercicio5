@@ -18,4 +18,12 @@ public class Catedraticos extends Cartas {
         this.ptsLlamadaAtencion = ptsLlamadaAtencion;
         this.ptsTiempoAtencion = ptsTiempoAtencion;
     }
+
+    @Override
+    public String toString() {
+    return super.toString()
+        + " | Departamento: " + departamento
+        + " | Puntos de llamada de atención: " + ptsLlamadaAtencion
+        + " | Puntos de tiempo de atención: " + ptsTiempoAtencion;
+}
 }

@@ -12,4 +12,10 @@ public class Cursos extends Cartas{
         this.creditos = creditos;
         this.puntos = puntos;
     }
+    @Override
+    public String toString() {
+    return super.toString()
+        + " | Créditos: " + creditos
+        + " | Puntos: " + puntos;
+}
  }

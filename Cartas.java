@@ -12,6 +12,14 @@ public class Cartas implements Comparable<Cartas> {
         this.descripcion = descripcion;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getNombreDescriptivo() {
+        return nombreDescriptivo;
+    }
+
     public void jugarCarta(){
 
     }

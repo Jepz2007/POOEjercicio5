@@ -23,16 +23,38 @@ public class Menu {
             } else {
                 switch (opcion){
                     case 1:
-                        Main.lista();
+                        Mazo.lista();
                         break;
                     case 2:
-                        Main.buscar();
+                        System.out.println("1: Buscar por ID.");
+                        System.out.println("2: Buscar por nombre.");
+                        System.out.print("Elija una opción: ");
+
+                        int tipoBusqueda = scanner.nextInt();
+                        scanner.nextLine();
+
+                        if (tipoBusqueda == 1) {
+                            System.out.print("Ingrese el ID: ");
+                            int idBuscado = scanner.nextInt();
+                            scanner.nextLine();
+
+                            Mazo.buscarPorId(idBuscado);
+
+                        } else if (tipoBusqueda == 2) {
+                            System.out.print("Ingrese el nombre completo: ");
+                            String nombreBuscado = scanner.nextLine().trim();
+
+                            Mazo.buscarPorNombre(nombreBuscado);
+
+                        } else {
+                            System.out.println("Opción inválida.");
+                        }
                         break;
                     case 3:
-                        Main.ordenar();
+                        Mazo.ordenar();
                         break;
                     case 4:
-                        Main.fin();
+                        Mazo.fin();
                         break;
                 }
             }
